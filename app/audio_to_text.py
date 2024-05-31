@@ -8,6 +8,7 @@ model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-base-960h")
 
 
 def audio_to_text(request):
+    print("Begin audio_to_text.")
     audio_file = request.files["file"]
     audio, rate = librosa.load(audio_file, sr=16000)
 
